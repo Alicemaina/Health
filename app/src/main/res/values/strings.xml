@@ -67,6 +67,7 @@
     <string name="register_account">Register Account</string>
     <string name="already_have_account_sign_in">Already have account Sign In</string>
     <string name="todo">TODO</string>
+    <string name="enter_notification_message">Enter notification message</string>
 
 </resources>
 

@@ -7,4 +7,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="margin_10">10dp</dimen>
     <dimen name="icon_size">83dp</dimen>
+
+    <dimen name="cardView_default_elevation">16dp</dimen>
+    <dimen name="cardView_default_radius">16dp</dimen>
 </resources>
