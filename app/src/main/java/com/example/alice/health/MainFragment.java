@@ -61,7 +61,7 @@ public class MainFragment extends Fragment implements View.OnClickListener{
             transaction.replace(R.id.mainFrame,getStarted);
             transaction.commit();
         }if (v == mGoProfile){
-            Fragment ProfFrag = new ProfileFragment();
+            Fragment ProfFrag = new Fragment();
             FragmentManager fm = getFragmentManager();
             FragmentTransaction transaction = fm.beginTransaction();
             transaction.replace(R.id.mainFrame,ProfFrag);

@@ -32,42 +32,45 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-        <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_login">Sign in</string>
 
-        <!-- Strings related to login -->
+    <!-- Strings related to login -->
 
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-        <!-- TODO: Remove or change this placeholder text -->
-        <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="user_gender">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Decline to state</item>
+    </string-array>
 
-        <string-array name="user_gender">
-            <item>Gender</item>
-            <item>Male</item>
-            <item>Female</item>
-            <item>Decline to state</item>
-        </string-array>
-
-        <string-array name="bloodGroup">
-            <item>Blood Group</item>
-            <item>A+</item>
-            <item>A-</item>
-            <item>B+</item>
-            <item>B-</item>
-            <item>AB+</item>
-            <item>AB-</item>
-            <item>O+</item>
-            <item>O-</item>
-            <item>Unknown</item>
-        </string-array>
-        <string name="title_activity_get_started">Get Started</string>
-        <string name="title_dashboard">Dashboard</string>
+    <string-array name="bloodGroup">
+        <item>Blood Group</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>Unknown</item>
+    </string-array>
+    <string name="title_activity_get_started">Get Started</string>
+    <string name="title_dashboard">Dashboard</string>
     <string name="action_sign_up">Sign Up</string>
     <string name="prompt_password_confirm">Password Confirm</string>
     <string name="register_account">Register Account</string>
     <string name="already_have_account_sign_in">Already have account Sign In</string>
     <string name="todo">TODO</string>
     <string name="enter_notification_message">Enter notification message</string>
+    <string name="name_1">Name 1</string>
+    <string name="true">True</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="age">Age</string>
 
 </resources>
 
