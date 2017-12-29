@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_medDetails"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="@string/user_details" />
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/ic_contact_phone_black_24dp"
+            android:title="@string/emergency_contacts" />
+        <item
+            android:id="@+id/nav_insurance"
+            android:icon="@drawable/ic_content_paste_black_24dp"
+            android:title="@string/insurance" />
+        <item
+            android:id="@+id/nav_userProfile"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/user_profile"/>
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/ic_person_pin_circle_black_24dp"
+            android:title="@string/location" />
+
+    </group>
+
+    <item android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/send" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                android:title="@string/logout" />
+        </menu>
+    </item>
+
+</menu>

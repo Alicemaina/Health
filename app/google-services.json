@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "378013798926",
+    "firebase_url": "https://health-8f32d.firebaseio.com",
+    "project_id": "health-8f32d",
+    "storage_bucket": "health-8f32d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378013798926:android:8696282d1753b1bd",
+        "android_client_info": {
+          "package_name": "com.example.alice.health"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378013798926-1t1f5fm738em7n9ej035bdroi7vvdm8j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPYmQz2R_CdCOzeL0c-1RKVBGyBPyeIXY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "378013798926-1t1f5fm738em7n9ej035bdroi7vvdm8j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

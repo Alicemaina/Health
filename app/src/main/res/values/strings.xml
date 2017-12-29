@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Health</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="health">Health</string>
+    <string name="dont_have_account_sign_up">Dont Have Account? Sign Up</string>
+    <string name="action_settings">action settings</string>
+    <string name="user_name">User Name</string>
+    <string name="home">Home</string>
+    <string name="user_details">User Details</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="insurance">Insurance</string>
+    <string name="user_profile">User Profile</string>
+    <string name="location">Location</string>
+    <string name="communicate">Communicate</string>
+    <string name="share">Share</string>
+    <string name="logout">Logout</string>
+    <string name="send">Send</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+        <string name="title_activity_login">Sign in</string>
+
+        <!-- Strings related to login -->
+
+
+
+        <!-- TODO: Remove or change this placeholder text -->
+        <string name="hello_blank_fragment">Hello blank fragment</string>
+
+        <string-array name="user_gender">
+            <item>Gender</item>
+            <item>Male</item>
+            <item>Female</item>
+            <item>Decline to state</item>
+        </string-array>
+
+        <string-array name="bloodGroup">
+            <item>Blood Group</item>
+            <item>A+</item>
+            <item>A-</item>
+            <item>B+</item>
+            <item>B-</item>
+            <item>AB+</item>
+            <item>AB-</item>
+            <item>O+</item>
+            <item>O-</item>
+            <item>Unknown</item>
+        </string-array>
+        <string name="title_activity_get_started">Get Started</string>
+        <string name="title_dashboard">Dashboard</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="prompt_password_confirm">Password Confirm</string>
+    <string name="register_account">Register Account</string>
+    <string name="already_have_account_sign_in">Already have account Sign In</string>
+    <string name="todo">TODO</string>
+
+</resources>
+
+
