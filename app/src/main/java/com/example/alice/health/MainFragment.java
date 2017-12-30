@@ -20,8 +20,7 @@ import butterknife.ButterKnife;
 
 public class MainFragment extends Fragment implements View.OnClickListener{
 
-    @BindView(R.id.get_started)
-    CardView mGetStarted;
+    @BindView(R.id.get_started) CardView mGetStarted;
     @BindView(R.id.get_aid_tips) CardView mGetAidTips;
     @BindView(R.id.go_profile) CardView mGoProfile;
 
@@ -55,7 +54,7 @@ public class MainFragment extends Fragment implements View.OnClickListener{
             Intent intent = new Intent(getActivity(), FirstAidActivity.class);
             startActivity(intent);
         }if (v == mGetStarted){
-            Fragment getStarted = new GetStartedIntroFragment();
+            Fragment getStarted = new GetStartedIntoFragmentActivity();
             FragmentManager fm = getFragmentManager();
             FragmentTransaction transaction = fm.beginTransaction();
             transaction.replace(R.id.mainFrame,getStarted);

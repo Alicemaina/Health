@@ -71,13 +71,14 @@
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingRight="5dp"
-                        android:paddingTop="7dp">
+                        android:paddingEnd="5dp"
+                        android:paddingTop="7dp"
+                        tools:ignore="RtlSymmetry">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Get Started"
+                            android:text="@string/get_started"
                             android:textAlignment="center"
                             android:textSize="24sp"
                             android:textStyle="bold"
@@ -88,7 +89,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:textAlignment="center"
-                            android:text="To help you get started with this app take a look here. All details are well explained."
+                            android:text="@string/to_help_you_get_started_with_this_app_take_a_look_here_all_details_are_well_explained"
                             android:layout_marginTop="7dp"/>
 
                     </LinearLayout>
@@ -120,25 +121,29 @@
                         android:innerRadius="0dp"
                         android:shape="ring"
                         android:layout_margin="10dp"
-                        android:thicknessRatio="1.9">
+                        android:thicknessRatio="1.9"
+                        tools:ignore="ObsoleteLayoutParam">
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/first_aid_tips_icon" />
+                            android:src="@drawable/first_aid_tips_icon"
+                            android:contentDescription="@string/todo" />
+
                     </android.support.v7.widget.CardView>
 
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingRight="5dp"
-                        android:paddingTop="7dp">
+                        android:paddingEnd="5dp"
+                        android:paddingTop="7dp"
+                        tools:ignore="RtlSymmetry">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="First Aid Tips"
+                            android:text="@string/first_aid_tips"
                             android:textAlignment="center"
                             android:textSize="24sp"
                             android:textStyle="bold"
@@ -149,7 +154,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:textAlignment="center"
-                            android:text="To help you get started with this app take a look here. All details are well explained."
+                            android:text="@string/to_help_you_get_started_with_this_app_take_a_look_here_all_details_are_well_explained"
                             android:layout_marginTop="7dp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -177,12 +182,14 @@
                         android:innerRadius="0dp"
                         android:shape="ring"
                         android:layout_margin="10dp"
-                        android:thicknessRatio="1.9">
+                        android:thicknessRatio="1.9"
+                        tools:ignore="ObsoleteLayoutParam">
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/user_info_icon" />
+                            android:src="@drawable/user_info_icon"
+                            android:contentDescription="@string/todo" />
 
                     </android.support.v7.widget.CardView>
 

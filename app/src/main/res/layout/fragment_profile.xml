@@ -1,557 +1,597 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.alice.health.FragmentProfileActivity">
-
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context="com.example.alice.health.FragmentProfileActivity">
 
-        <RelativeLayout
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/header_cover_image"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:background="#fff"
-                android:src="@drawable/health_logo"
-                android:contentDescription="@string/todo" />
-
-            <ImageButton
-                android:id="@+id/user_profile_photo"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_below="@+id/header_cover_image"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="-60dp"
-                android:background="#fff"
-                android:elevation="5dp"
-                android:clickable="true"
-                android:padding="20dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/alice1"
-                android:contentDescription="@string/todo" />
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
 
             <RelativeLayout
-                android:id="@+id/profile_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/header_cover_image"
-                android:background="@color/colorPrimary"
-                android:elevation="4dp"
-                android:paddingBottom="24dp">
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/editProfile"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_edit_black_24dp"
-                    android:contextClickable="true"
-                    android:layout_marginTop="13dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/bloodTypeField"
-                    android:layout_toEndOf="@+id/bloodTypeField"
+                    android:id="@+id/header_cover_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:background="#ebca0707"
+                    android:src="@drawable/health_logo"
                     android:contentDescription="@string/todo" />
 
-                <TextView
-                    android:id="@+id/user_profile_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageButton
+                    android:id="@+id/user_profile_photo"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/header_cover_image"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="76dp"
-                    android:text="User Name"
-                    android:textColor="#fff"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="-60dp"
+                    android:background="#fff"
+                    android:elevation="5dp"
+                    android:clickable="true"
+                    android:padding="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/alice"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true" />
 
-                <TextView
-                    android:id="@+id/bloodTypeField"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/user_profile_name"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="12dp"
-                    android:text="Blood Type:"
-                    android:layout_alignLeft="@+id/bloodType"
-                    android:paddingRight="90dp"
-                    android:textColor="#000"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/bloodType"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/user_profile_name"
-                    android:paddingLeft="89dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="12dp"
-                    android:text="           "
-                    android:textColor="#fff"
-                    android:textSize="16sp" />
-
-            </RelativeLayout>
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/profile_layout"
-                android:layout_marginTop="5dp"
-                android:orientation="vertical">
-
-                <LinearLayout
+                <RelativeLayout
+                    android:id="@+id/profile_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header_cover_image"
+                    android:background="@color/colorPrimary"
+                    android:elevation="4dp"
+                    android:paddingBottom="24dp">
 
-                    <GridLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/editProfile"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_edit_black_24dp"
+                        android:contextClickable="true"
+                        android:layout_marginTop="13dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/bloodTypeField"
+                        android:layout_toEndOf="@+id/bloodTypeField"
+                        android:contentDescription="@string/todo"
+                        tools:targetApi="m"
+                        tools:ignore="RtlHardcoded" />
 
-                        <TextView
-                            android:id="@+id/genderField"
-                            android:layout_width="93dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#fff"
-                            android:clickable="true"
-                            android:elevation="4dp"
-                            android:padding="10dp"
-                            android:paddingTop="3dp"
-                            android:text="Gender"
-                            android:textColor="#000" />
+                    <TextView
+                        android:id="@+id/user_profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="76dp"
+                        android:text="@string/user_name"
+                        android:textColor="#fff"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/gender"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="6dp"
-                            android:background="#fff"
-                            android:clickable="true"
-                            android:elevation="4dp"
-                            android:padding="10dp"
-                            android:text=""
-                            android:textColor="#000" />
+                    <TextView
+                        android:id="@+id/bloodTypeField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/user_profile_name"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/blood_type"
+                        android:layout_alignStart="@+id/bloodType"
+                        android:paddingEnd="90dp"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        tools:ignore="RtlSymmetry" />
 
-                    </GridLayout>
+                    <TextView
+                        android:id="@+id/bloodType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/user_profile_name"
+                        android:paddingStart="89dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/hold"
+                        android:textColor="#fff"
+                        android:textSize="16sp"
+                        tools:ignore="RtlSymmetry" />
 
-                </LinearLayout>
-
+                </RelativeLayout>
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
-
-                    <GridLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:id="@+id/ageField"
-                            android:layout_width="93dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#fff"
-                            android:clickable="true"
-                            android:elevation="4dp"
-                            android:padding="10dp"
-                            android:paddingTop="3dp"
-                            android:text="@string/age"
-                            android:textColor="#000" />
-
-                        <TextView
-                            android:id="@+id/userAge"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:background="#fff"
-                            android:clickable="true"
-                            android:elevation="4dp"
-                            android:padding="10dp"
-                            android:text=""
-                            android:textColor="#000" />
-
-                    </GridLayout>
-
-                </LinearLayout>
-
-
-                <TextView
-                    android:id="@+id/emergencyContact"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_marginBottom="3dp"
-                    android:layout_marginTop="3dp"
-                    android:background="#fff"
-                    android:textAlignment="center"
-                    android:clickable="true"
-                    android:elevation="4dp"
-                    android:padding="10dp"
-                    android:textColor="#000"
-                    android:text="@string/emergency_contacts" />
+                    android:layout_below="@+id/profile_layout"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
 
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
-                    <TextView
-                        android:id="@+id/emergencyContact1"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="#fff"
-                        android:elevation="4dp"
-                        android:layout_alignBottom="@+id/emergencyContact"
-                        android:padding="10dp"
-                        android:text="@string/name_1" />
-
-                    <TextView
-                        android:id="@+id/emergencyContact1phone"
+                    <LinearLayout
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/genderField"
+                                android:layout_width="93dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="#fff"
+                                android:clickable="true"
+                                android:elevation="4dp"
+                                android:padding="10dp"
+                                android:paddingTop="3dp"
+                                android:text="@string/gender"
+                                android:textColor="#000"
+                                android:focusable="true" />
+
+                            <TextView
+                                android:id="@+id/gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="6dp"
+                                android:background="#fff"
+                                android:clickable="true"
+                                android:elevation="4dp"
+                                android:padding="10dp"
+                                android:text=""
+                                android:textColor="#000"
+                                android:focusable="true" />
+
+                        </GridLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/ageField"
+                                android:layout_width="93dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="#fff"
+                                android:clickable="true"
+                                android:elevation="4dp"
+                                android:padding="10dp"
+                                android:paddingTop="3dp"
+                                android:text="@string/age"
+                                android:textColor="#000"
+                                android:focusable="true" />
+
+                            <TextView
+                                android:id="@+id/userAge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:background="#fff"
+                                android:clickable="true"
+                                android:elevation="4dp"
+                                android:padding="10dp"
+                                android:text=""
+                                android:textColor="#000"
+                                android:focusable="true" />
+
+                        </GridLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/emergencyContact"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_marginBottom="3dp"
                         android:layout_marginTop="3dp"
                         android:background="#fff"
-                        android:layout_toLeftOf="@+id/emergencyContact1"
+                        android:textAlignment="center"
                         android:clickable="true"
                         android:elevation="4dp"
-                        android:layout_marginStart="10dp"
                         android:padding="10dp"
                         android:textColor="#000"
-                        android:text="true"
+                        android:text="@string/emergency_contacts"
                         android:focusable="true" />
-                </GridLayout>
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/emergencyContact2"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="#fff"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:padding="10dp"
-                        android:text="  Name2" />
-
-
-
-                    <TextView
-                        android:id="@+id/emergencyContact2phone"
-                        android:layout_width="fill_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginTop="3dp"
-                        android:background="#fff" android:layout_toLeftOf="@+id/emergencyContact2"
-                        android:clickable="true"
-                        android:textColor="#000"
-                        android:layout_marginLeft="9dp"
-                        android:elevation="4dp"
-                        android:padding="10dp"
-                        android:text="" />
-
-                </GridLayout>
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
-                    <TextView
-                        android:id="@+id/emergencyContact3"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="#fff"
-                        android:elevation="4dp"
-                        android:layout_alignBottom="@+id/emergencyContact"
-                        android:padding="10dp"
-                        android:text=" Name 3" />
-
-
-                    <TextView
-                        android:id="@+id/emergencyContact3phone"
-                        android:layout_width="fill_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginTop="3dp"
-                        android:background="#fff"
-                        android:layout_toLeftOf="@+id/emergencyContact3"
-                        android:layout_marginLeft="10dp"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:padding="10dp"
-                        android:text=""
-                        android:textColor="#000"/>
-                </GridLayout>
-
-
-                <TextView
-                    android:id="@+id/conditions"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="#fff"
-                    android:padding="10dp"
-                    android:textColor="#000"
-                    android:textAlignment="center"
-                    android:text="Medical Conditions" />
-
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
 
                     <GridLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
+
                         <TextView
-                            android:id="@+id/listConditions"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/emergencyContact1"
+                            android:layout_width="170dp"
                             android:layout_height="wrap_content"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:elevation="4dp"
+                            android:layout_alignBottom="@+id/emergencyContact"
+                            android:padding="10dp"
+                            android:text="@string/name_1"
+                            tools:ignore="ObsoleteLayoutParam" />
+
+                        <TextView
+                            android:id="@+id/emergencyContact1phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="#fff"
+                            android:layout_toStartOf="@+id/emergencyContact1"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:layout_marginStart="10dp"
+                            android:padding="10dp"
                             android:textColor="#000"
-                            android:layout_alignBottom="@+id/conditions">
-                        </TextView>
-
+                            android:text="@string/hold"
+                            tools:ignore="ObsoleteLayoutParam"
+                            android:focusable="true" />
                     </GridLayout>
-                </ScrollView>
 
-                <TextView
-                    android:id="@+id/medicalAllergies"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="#fff"
-                    android:clickable="true"
-                    android:elevation="4dp"
-                    android:padding="10dp"
-                    android:textColor="#000"
-                    android:textAlignment="center"
-                    android:text="Medical Allergies" />
-
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
                     <GridLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <TextView
-                            android:id="@+id/listMedicalAllergies"
-                            android:layout_alignBottom="@+id/medicalAllergies"
-                            android:layout_width="match_parent"
-                            android:paddingRight="2dp"
-                            android:paddingLeft="2dp"
-                            android:textColor="#000"
-                            android:layout_height="wrap_content">
 
-                        </TextView>
+                        <TextView
+                            android:id="@+id/emergencyContact2"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:padding="10dp"
+                            android:text="@string/name2"
+                            android:focusable="true" />
+
+
+
+                        <TextView
+                            android:id="@+id/emergencyContact2phone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="#fff"
+                            android:layout_toStartOf="@+id/emergencyContact2"
+                            android:clickable="true"
+                            android:textColor="#000"
+                            android:layout_marginStart="9dp"
+                            android:elevation="4dp"
+                            android:padding="10dp"
+                            android:text=""
+                            tools:ignore="ObsoleteLayoutParam"
+                            android:focusable="true" />
+
                     </GridLayout>
-                </ScrollView>
-                <TextView
-                    android:id="@+id/otherAllergies"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="#fff"
-                    android:clickable="true"
-                    android:elevation="4dp"
-                    android:padding="10dp"
-                    android:textColor="#000"
-                    android:textAlignment="center"
-                    android:text="Other Allergies" />
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp">
+
                     <GridLayout
                         android:layout_width="match_parent"
-                        android:layout_height="70dp">
+                        android:layout_height="match_parent">
+
 
                         <TextView
-                            android:id="@+id/listotherAllergies"
-                            android:layout_alignBottom="@+id/otherAllergies"
+                            android:id="@+id/emergencyContact3"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:elevation="4dp"
+                            android:layout_alignBottom="@+id/emergencyContact"
+                            android:padding="10dp"
+                            android:text="@string/name_3"
+                            tools:ignore="ObsoleteLayoutParam" />
+
+
+                        <TextView
+                            android:id="@+id/emergencyContact3phone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="#fff"
+                            android:layout_toStartOf="@+id/emergencyContact3"
+                            android:layout_marginStart="10dp"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:padding="10dp"
+                            android:text=""
                             android:textColor="#000"
-                            android:paddingLeft="2dp"
-                            android:paddingRight="2dp"
+                            tools:ignore="ObsoleteLayoutParam"
+                            android:focusable="true" />
+                    </GridLayout>
+
+
+                    <TextView
+                        android:id="@+id/conditions"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:padding="10dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        android:text="@string/medical_conditions" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        tools:ignore="NestedScrolling">
+
+                        <GridLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                        </TextView>
+                            <TextView
+                                android:id="@+id/listConditions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:textColor="#000"
+                                android:layout_alignBottom="@+id/conditions"
+                                tools:ignore="ObsoleteLayoutParam">
+                            </TextView>
+
+                        </GridLayout>
+                    </ScrollView>
+
+                    <TextView
+                        android:id="@+id/medicalAllergies"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:padding="10dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        android:text="@string/medical_allergies"
+                        android:focusable="true" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        tools:ignore="NestedScrolling">
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/listMedicalAllergies"
+                                android:layout_alignBottom="@+id/medicalAllergies"
+                                android:layout_width="match_parent"
+                                android:paddingRight="2dp"
+                                android:paddingLeft="2dp"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content"
+                                tools:ignore="ObsoleteLayoutParam">
+
+                            </TextView>
+                        </GridLayout>
+                    </ScrollView>
+                    <TextView
+                        android:id="@+id/otherAllergies"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:padding="10dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        android:text="@string/other_allergies"
+                        android:focusable="true" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        tools:ignore="NestedScrolling">
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp">
+
+                            <TextView
+                                android:id="@+id/listotherAllergies"
+                                android:layout_alignBottom="@+id/otherAllergies"
+                                android:textColor="#000"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:ignore="ObsoleteLayoutParam">
+
+                            </TextView>
+                        </GridLayout>
+
+                    </ScrollView>
+
+
+
+                    <TextView
+                        android:id="@+id/insuranceField"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#fff"
+                        android:textAlignment="center"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:padding="10dp"
+                        android:textColor="#000"
+                        android:text="@string/insurance_details"
+                        android:focusable="true" />
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/userNationalIdField"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:elevation="4dp"
+                            android:padding="10dp"
+                            android:text="@string/id_number"/>
+
+
+                        <TextView
+                            android:id="@+id/userNationalId"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="#fff"
+                            android:layout_toStartOf="@+id/userNationalIdField"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:layout_marginStart="10dp"
+                            android:padding="10dp"
+                            android:textColor="#000"
+                            android:text="@string/hold"
+                            tools:ignore="ObsoleteLayoutParam"
+                            android:focusable="true" />
                     </GridLayout>
 
-                </ScrollView>
 
 
 
-                <TextView
-                    android:id="@+id/insuranceField"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_marginBottom="3dp"
-                    android:layout_marginTop="3dp"
-                    android:background="#fff"
-                    android:textAlignment="center"
-                    android:clickable="true"
-                    android:elevation="4dp"
-                    android:padding="10dp"
-                    android:textColor="#000"
-                    android:text="Insurance Details" />
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
 
-                    <TextView
-                        android:id="@+id/userNationalIdField"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="#fff"
-                        android:elevation="4dp"
-                        android:padding="10dp"
-                        android:text=" Id Number"/>
+                        <TextView
+                            android:id="@+id/insurancePolicyNoField"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:elevation="4dp"
+                            android:padding="10dp"
+                            android:text="@string/policy_number"/>
 
 
-                    <TextView
-                        android:id="@+id/userNationalId"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginTop="3dp"
-                        android:background="#fff"
-                        android:layout_toLeftOf="@+id/userNationalIdField"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:layout_marginLeft="10dp"
-                        android:padding="10dp"
-                        android:textColor="#000"
-                        android:text=" "/>
-                </GridLayout>
+                        <TextView
+                            android:id="@+id/insurancePolicyNo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="#fff"
+                            android:layout_toStartOf="@+id/insurancePolicyNoField"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:layout_marginStart="10dp"
+                            android:padding="10dp"
+                            android:textColor="#000"
+                            android:text="@string/hold"
+                            tools:ignore="ObsoleteLayoutParam"
+                            android:focusable="true" />
+                    </GridLayout>
 
 
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
 
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/userMedCoverField"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:elevation="4dp"
+                            android:padding="10dp"
+                            android:text="@string/company_cover"/>
 
 
-                    <TextView
-                        android:id="@+id/insurancePolicyNoField"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="#fff"
-                        android:elevation="4dp"
-                        android:padding="10dp"
-                        android:text="Policy Number"/>
+                        <TextView
+                            android:id="@+id/userMedCover"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="#fff"
+                            android:layout_toStartOf="@+id/userMedCoverField"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:layout_marginStart="10dp"
+                            android:padding="10dp"
+                            android:textColor="#000"
+                            android:text="@string/hold"
+                            tools:ignore="ObsoleteLayoutParam"
+                            android:focusable="true" />
+                    </GridLayout>
 
 
-                    <TextView
-                        android:id="@+id/insurancePolicyNo"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginTop="3dp"
-                        android:background="#fff"
-                        android:layout_toLeftOf="@+id/insurancePolicyNoField"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:layout_marginLeft="10dp"
-                        android:padding="10dp"
-                        android:textColor="#000"
-                        android:text=" "/>
-                </GridLayout>
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
 
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/userPrefHospitalField"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:elevation="4dp"
+                            android:padding="10dp"
+                            android:text="@string/prefered_hospital"/>
 
 
-                    <TextView
-                        android:id="@+id/userMedCoverField"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="#fff"
-                        android:elevation="4dp"
-                        android:padding="10dp"
-                        android:text="Company Cover"/>
-
-
-                    <TextView
-                        android:id="@+id/userMedCover"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginTop="3dp"
-                        android:background="#fff"
-                        android:layout_toLeftOf="@+id/userMedCoverField"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:layout_marginLeft="10dp"
-                        android:padding="10dp"
-                        android:textColor="#000"
-                        android:text=" "/>
-                </GridLayout>
-
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
-                    <TextView
-                        android:id="@+id/userPrefHospitalField"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:background="#fff"
-                        android:elevation="4dp"
-                        android:padding="10dp"
-                        android:text="Prefered Hospital"/>
-
-
-                    <TextView
-                        android:id="@+id/userPrefHospital"
-                        android:layout_width="fill_parent"
-                        android:layout_height="60dp"
-                        android:layout_margin="5dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginTop="3dp"
-                        android:background="#fff"
-                        android:layout_toLeftOf="@+id/userPrefHospitalField"
-                        android:clickable="true"
-                        android:elevation="4dp"
-                        android:layout_marginLeft="10dp"
-                        android:padding="10dp"
-                        android:textColor="#000"
-                        android:text=" "/>
-                </GridLayout>
+                        <TextView
+                            android:id="@+id/userPrefHospital"
+                            android:layout_width="fill_parent"
+                            android:layout_height="60dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="#fff"
+                            android:layout_toStartOf="@+id/userPrefHospitalField"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:layout_marginStart="10dp"
+                            android:padding="10dp"
+                            android:textColor="#000"
+                            android:text="@string/hold"
+                            tools:ignore="ObsoleteLayoutParam"
+                            android:focusable="true" />
+                    </GridLayout>
 
 
 
-            </LinearLayout>
-        </RelativeLayout>
-    </ScrollView>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
 
+    </FrameLayout>
 
-</android.support.constraint.ConstraintLayout>
