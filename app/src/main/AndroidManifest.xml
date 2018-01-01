@@ -27,7 +27,7 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".FragmentProfileActivity" />
+        <activity android:name=".FragmentProfile" />
         <activity android:name=".FirstAidActivity" />
     </application>
 

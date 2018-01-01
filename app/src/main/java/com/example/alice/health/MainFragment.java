@@ -54,7 +54,7 @@ public class MainFragment extends Fragment implements View.OnClickListener{
             Intent intent = new Intent(getActivity(), FirstAidActivity.class);
             startActivity(intent);
         }if (v == mGetStarted){
-            Fragment getStarted = new GetStartedIntoFragmentActivity();
+            Fragment getStarted = new GetStartedIntoFragment();
             FragmentManager fm = getFragmentManager();
             FragmentTransaction transaction = fm.beginTransaction();
             transaction.replace(R.id.mainFrame,getStarted);

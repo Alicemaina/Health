@@ -37,10 +37,10 @@ import com.google.firebase.storage.UploadTask;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class FragmentProfileActivity extends AppCompatActivity implements View.OnClickListener, KeyEvent.Callback {
+public class FragmentProfile extends AppCompatActivity implements View.OnClickListener, KeyEvent.Callback {
 
 
-    private static final String TAG = FragmentProfileActivity.class.getSimpleName();
+    private static final String TAG = FragmentProfile.class.getSimpleName();
     public static final int RESULT_GALLERY = 0;
     public StorageReference mStorage;
     public  String mCurrentPhotoPath;
@@ -78,7 +78,7 @@ public class FragmentProfileActivity extends AppCompatActivity implements View.O
     }
 
 
-    public FragmentProfileActivity() {
+    public FragmentProfile() {
         // Required empty public constructor
     }
 
@@ -112,8 +112,8 @@ public class FragmentProfileActivity extends AppCompatActivity implements View.O
         }
         if(v==mEditProfile){
             Fragment EditProfFrag = new EditProfileFragment();
-            FragmentManager fm = getFragmentManager();
-            FragmentTransaction transaction = fm.beginTransaction();
+            android.app.FragmentManager fm = getFragmentManager();
+            android.app.FragmentTransaction transaction = fm.beginTransaction();
             transaction.replace(R.id.mainFrame,EditProfFrag);
             transaction.commit();
 
@@ -140,7 +140,7 @@ public class FragmentProfileActivity extends AppCompatActivity implements View.O
 
                 }
 
-            }).addOnFailureListener(new OnFailureListener() {
+            }).addOnFailureListener( new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
                     // handel uploads fails

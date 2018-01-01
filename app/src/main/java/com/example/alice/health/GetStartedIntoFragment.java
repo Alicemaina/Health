@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
  * Created by alice on 12/30/17.
  */
 
-public class GetStartedIntoFragmentActivity extends Fragment implements View.OnClickListener {
+public class GetStartedIntoFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
@@ -23,7 +23,7 @@ public class GetStartedIntoFragmentActivity extends Fragment implements View.OnC
     @BindView(R.id.btn_get_started)
     TextView mGetStarted;
 
-    public GetStartedIntoFragmentActivity() {
+    public GetStartedIntoFragment() {
         // Required empty public constructor
     }
 
