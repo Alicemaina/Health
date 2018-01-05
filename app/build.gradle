@@ -46,6 +46,14 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
+    compile 'com.microsoft.azure:notification-hubs-android-sdk:0.4@aar'
+    compile 'com.microsoft.azure:azure-notifications-handler:1.0.1@aar'
+    compile 'com.android.support:support-vector-drawable:26.1.0'
+
+    compile 'io.nlopez.smartlocation:library:3.3.3'
+    compile 'io.nlopez.smartlocation:rx:3.3.3'
+    compile 'io.nlopez.smartlocation:rx:3.3.3'
+
     testCompile 'junit:junit:4.12'
 
 

@@ -68,7 +68,6 @@
     <string name="todo">TODO</string>
     <string name="enter_notification_message">Enter notification message</string>
     <string name="name_1">Name 1</string>
-
     <string name="fire_burns">Fire Burns</string>
     <string name="nose_breeding">Nose Breeding</string>
     <string name="fainting">Fainting</string>
@@ -85,37 +84,41 @@
     <string name="other_allergies">Other Allergies</string>
     <string name="insurance_details">Insurance Details</string>
     <string name="id_number">Id Number</string>
-
     <string name="company_cover">Company Cover</string>
-
     <string name="get_started">Get Started</string>
     <string name="to_help_you_get_started_with_this_app_take_a_look_here_all_details_are_well_explained">To help you get started with this app take a look here. All details are well explained.</string>
     <string name="first_aid_tips">First Aid Tips</string>
-
     <string name="your_number_one_alert_app">Your Number One Alert App</string>
     <string name="deliver_baby">Deliver Baby</string>
     <string name="to_get_started_n_watch_the_video_below">To Get Started   Watch the video below</string>
-    <string name="medical_background">Medical Background</string>
+    <string name="medicalBackground">Medical Background</string>
+    <string name="update">Update</string>
+    <string name="emergencyContacts">Emergency Contacts</string>
+    <string name="contactNumber">Contact number</string>
+    <string name="medical_insurance">Medical Insurance</string>
+    <string name="medical_profile">Medical Profile</string>
+    <string name="basic_user_info">Basic User Info</string>
     <string name="full_name">Full Name</string>
     <string name="phone_number">Phone Number</string>
-    <string name="age">Age</string>
     <string name="please_state_any_pre_existing_medical_conditions_you_have">Please state any pre-existing medical conditions you have</string>
     <string name="state_medications_you_are_allergic_to">State medications you are allergic to</string>
     <string name="state_other_allergies">State other allergies</string>
-    <string name="update">Update</string>
-    <string name="emergency_contacts">Emergency Contacts</string>
-    <string name="emergency_contact_name">Emergency Contact Name</string>
-
-    <string name="emergency_contact_name_two">Emergency Contact Name Two</string>
-
-    <string name="emergency_contact_name_three">Emergency Contact Name Three</string>
-    <string name="contact_number">Contact number</string>
-
     <string name="medical_cover">Medical Cover</string>
+    <string name="this_section_is_optional">This section is optional</string>
     <string name="national_id">National Id</string>
+    <string name="company_insuranced">Company Insuranced</string>
+    <string name="submit">Submit</string>
+    <string name="name">Name</string>
+    <string name="bloodtype">BloodType</string>
+    <string name="age">Age</string>
     <string name="policy_number">Policy Number</string>
-    <string name="medical_insurance">Medical Insurance</string>
     <string name="preferred_hospital">Preferred Hospital</string>
+    <string name="emergency_contact_name_three">Emergency Contact Name Three</string>
+    <string name="emergency_contact_name_two">Emergency Contact Name Two</string>
+    <string name="contact_number">Contact number</string>
+    <string name="emergency_contact_name">Emergency Contact Name</string>
+    <string name="step_2_please_provide_emergency_contacts">Step 2: Please Provide Emergency Contacts</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
 
 </resources>
 

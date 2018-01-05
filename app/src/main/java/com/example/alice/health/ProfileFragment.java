@@ -9,8 +9,6 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -37,10 +35,10 @@ import com.google.firebase.storage.UploadTask;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class FragmentProfile extends AppCompatActivity implements View.OnClickListener, KeyEvent.Callback {
+public class ProfileFragment extends AppCompatActivity implements View.OnClickListener, KeyEvent.Callback {
 
 
-    private static final String TAG = FragmentProfile.class.getSimpleName();
+    private static final String TAG = ProfileFragment.class.getSimpleName();
     public static final int RESULT_GALLERY = 0;
     public StorageReference mStorage;
     public  String mCurrentPhotoPath;
@@ -78,7 +76,7 @@ public class FragmentProfile extends AppCompatActivity implements View.OnClickLi
     }
 
 
-    public FragmentProfile() {
+    public ProfileFragment() {
         // Required empty public constructor
     }
 

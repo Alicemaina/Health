@@ -3,7 +3,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.alice.health.FragmentProfile">
+        tools:context="com.example.alice.health.ProfileFragment">
 
         <ScrollView
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -201,7 +201,7 @@
                         android:elevation="4dp"
                         android:padding="10dp"
                         android:textColor="#000"
-                        android:text="@string/emergency_contacts"
+                        android:text="@string/emergencyContacts"
                         android:focusable="true" />
 
                     <GridLayout
@@ -565,7 +565,7 @@
                             android:background="#fff"
                             android:elevation="4dp"
                             android:padding="10dp"
-                            android:text="@string/prefered_hospital"/>
+                            android:text="@string/preferred_hospital"/>
 
 
                         <TextView

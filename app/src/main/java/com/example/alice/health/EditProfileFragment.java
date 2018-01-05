@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.alice.health.models.EmergencyContacts;
+import com.example.alice.health.models.InsuranceDetails;
+import com.example.alice.health.models.medicalDetails;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -117,11 +120,14 @@ public class EditProfileFragment extends Fragment implements View.OnClickListene
 
 
         FirebaseUser users= FirebaseAuth.getInstance().getCurrentUser();
-        String uid=users.getUid();
+        String uid= null;
+        if (users != null) {
+            uid = users.getUid();
+        }
 
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
-        medicalDetails medDetails = new medicalDetails (username,userAge,phoneNumber,gender,bloodGroup, medicalConditions, medicalAllergies, otherAllergies);
+        medicalDetails medDetails = new medicalDetails(username,userAge,phoneNumber,gender,bloodGroup, medicalConditions, medicalAllergies, otherAllergies);
 
 
         reference.child("medicalDetails").setValue(medDetails);
@@ -134,18 +140,21 @@ public class EditProfileFragment extends Fragment implements View.OnClickListene
         String nationalId = mNationalId.getText().toString();
         String policyNumber = mPolicyNo.getText().toString();
         String medicalCover = mMedCover.getText().toString();
-        String preferedHospital = mPrefHospital.getText().toString();
+        String preferredHospital = mPrefHospital.getText().toString();
 
         FirebaseUser users= FirebaseAuth.getInstance().getCurrentUser();
-        String uid=users.getUid();
+        String uid= null;
+        if (users != null) {
+            uid = users.getUid();
+        }
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
 
-        InsuranceDetails insuranceDetails = new InsuranceDetails(nationalId, policyNumber,medicalCover, preferedHospital);
+        InsuranceDetails insuranceDetails = new InsuranceDetails(nationalId, policyNumber,medicalCover, preferredHospital);
 
         reference.child("insuranceDetails").setValue(insuranceDetails);
 
-        Toast.makeText(getActivity(), " Insurance Details Upaded", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), " InsuranceDetails Details Upaded", Toast.LENGTH_SHORT).show();
     }
 
     public void UpdateEmergencyContactsToFirebase(){
@@ -158,7 +167,10 @@ public class EditProfileFragment extends Fragment implements View.OnClickListene
         String emergencyContactNumber2 = mEmergencyNumber2.getText().toString();
 
         FirebaseUser users= FirebaseAuth.getInstance().getCurrentUser();
-        String uid=users.getUid();
+        String uid= null;
+        if (users != null) {
+            uid = users.getUid();
+        }
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
 

@@ -1,0 +1,116 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alice.health.InsuranceDetailFragment">
+
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight"
+        tools:ignore="UselessParent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="30dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/linearLayout"
+                tools:ignore="ObsoleteLayoutParam">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/medical_cover"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/this_section_is_optional"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:id="@+id/userNationalId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="@string/national_id"
+                    android:nextFocusDown="@+id/userBtn"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/insurancePolicyNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="@string/policy_number"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/userMedCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="@string/company_insuranced"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/userPrefHospital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="@string/preferred_hospital"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <Button
+                    android:id="@+id/userBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/submit"
+                    android:background="@color/flatui_midnight_blue"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</FrameLayout>
+
+
