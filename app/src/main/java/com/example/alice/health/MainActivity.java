@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
-import android.service.notification.NotificationListenerService;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -32,6 +31,7 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.location.DetectedActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.microsoft.windowsazure.notifications.NotificationsManager;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -50,6 +50,8 @@ import io.nlopez.smartlocation.OnActivityUpdatedListener;
 import io.nlopez.smartlocation.OnLocationUpdatedListener;
 import io.nlopez.smartlocation.SmartLocation;
 import io.nlopez.smartlocation.location.providers.LocationGooglePlayServicesProvider;
+
+import static com.example.alice.health.notifications.NotificationSettings.*;
 
 //Import statements for azure
 
@@ -92,14 +94,12 @@ public class MainActivity extends AppCompatActivity
                 if (user != null) {
                     //noinspection ConstantConditions
                     getSupportActionBar().setTitle("Welcome, "+ user.getDisplayName() + "!");
-                } else {
-
                 }
             }
 
         };
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         if(savedInstanceState ==null) {
@@ -119,13 +119,14 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.mainFrame, fragment).commit();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        //noinspection deprecation
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         if (ContextCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -136,7 +137,7 @@ public class MainActivity extends AppCompatActivity
 
         //Notification start
         mainActivity = this;
-        final NotificationListenerService notificationListenerService = new NotificationListenerService(this, NotificationSettings.SenderId, MyHandler.class);
+        NotificationsManager.handleNotifications(this, NotificationSettings.SenderId, MyHandler.class);
         registerWithNotificationHubs();
     }
     public void startLocation() {
@@ -153,7 +154,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -190,7 +191,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         Fragment fragment = null;
-        Class fragmentClass;
+        Class fragmentClass = null;
 
         if  (id == R.id.nav_home) {
             fragmentClass = MainFragment.class;
@@ -255,7 +256,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_logout){
             logout();
         }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -278,9 +279,11 @@ public class MainActivity extends AppCompatActivity
     public void onActivityUpdated(DetectedActivity detectedActivity) {
 
     }
-    public void showLocation(Location location) {
+    public Location showLocation(Location location) {
         if (location != null) {
+            return  location;
         } else {
+            return location;
         }
     }
     @Override
@@ -405,7 +408,7 @@ public class MainActivity extends AppCompatActivity
         String token = null;
         try {
             targetUri = URLEncoder
-                    .encode(uri.toString().toLowerCase(), "UTF-8")
+                    .encode(uri.toLowerCase(), "UTF-8")
                     .toLowerCase();
 
             long expiresOnDate = System.currentTimeMillis();
@@ -452,7 +455,7 @@ public class MainActivity extends AppCompatActivity
      * @param v
      */
     public void sendNotificationButtonOnClick(View v) {
-        EditText notificationText = (EditText) findViewById(R.id.editTextNotificationMessage);
+        EditText notificationText = findViewById(R.id.editTextNotificationMessage);
         final String json = "{\"data\":{\"message\":\"" + notificationText.getText().toString() + "\"}}";
 
         new Thread()
@@ -463,8 +466,8 @@ public class MainActivity extends AppCompatActivity
                 {
                     // Based on reference documentation...
                     // http://msdn.microsoft.com/library/azure/dn223273.aspx
-                    ParseConnectionString(NotificationSettings.HubFullAccess);
-                    URL url = new URL(HubEndpoint + NotificationSettings.HubName +
+                    ParseConnectionString(HubFullAccess);
+                    URL url = new URL(HubEndpoint + HubName +
                             "/messages/?api-version=2015-01");
 
                     HttpURLConnection urlConnection = (HttpURLConnection)url.openConnection();

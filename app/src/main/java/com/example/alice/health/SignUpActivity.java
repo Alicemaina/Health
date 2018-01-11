@@ -123,7 +123,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             mEmail.setError("Please enter a valid email address");
             return false;
         }
-        return isGoodEmail;
+        return true;
     }
 
     private boolean isValidName(String name) {
@@ -170,6 +170,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     public void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
+//        updateUI(currentUser);
     }
 
     @Override

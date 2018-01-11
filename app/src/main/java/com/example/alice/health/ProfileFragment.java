@@ -9,8 +9,8 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,21 +35,19 @@ import com.google.firebase.storage.UploadTask;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ProfileFragment extends AppCompatActivity implements View.OnClickListener, KeyEvent.Callback {
+import static android.app.Activity.RESULT_OK;
 
+public class ProfileFragment extends Fragment  implements View.OnClickListener {
 
-    private static final String TAG = ProfileFragment.class.getSimpleName();
+    protected static final String TAG = ProfileFragment.class.getSimpleName();
     public static final int RESULT_GALLERY = 0;
     public StorageReference mStorage;
-    public  String mCurrentPhotoPath;
+    protected String mCurrentPhotoPath;
 
-    @BindView(R.id.header_cover_image)
-    ImageView mLogoImage;
-    @BindView(R.id.user_profile_photo)
-    ImageButton mUserProfilePhoto;
+    @BindView(R.id.header_cover_image) ImageView mLogoImage;
+    @BindView(R.id.user_profile_photo) ImageButton mUserProfilePhoto;
     @BindView(R.id.editProfile) ImageView mEditProfile;
-    @BindView(R.id.user_profile_name)
-    TextView mUserName;
+    @BindView(R.id.user_profile_name) TextView mUserName;
     @BindView(R.id.bloodType) TextView mBloodType;
     @BindView(R.id.gender) TextView mGender;
     @BindView(R.id.emergencyContact1) TextView mEmergencyContactOne;
@@ -80,7 +78,8 @@ public class ProfileFragment extends AppCompatActivity implements View.OnClickLi
         // Required empty public constructor
     }
 
-    
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.fragment_profile, container, false);
@@ -110,8 +109,8 @@ public class ProfileFragment extends AppCompatActivity implements View.OnClickLi
         }
         if(v==mEditProfile){
             Fragment EditProfFrag = new EditProfileFragment();
-            android.app.FragmentManager fm = getFragmentManager();
-            android.app.FragmentTransaction transaction = fm.beginTransaction();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
             transaction.replace(R.id.mainFrame,EditProfFrag);
             transaction.commit();
 
@@ -138,7 +137,7 @@ public class ProfileFragment extends AppCompatActivity implements View.OnClickLi
 
                 }
 
-            }).addOnFailureListener( new OnFailureListener() {
+            }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
                     // handel uploads fails

@@ -27,15 +27,13 @@ import butterknife.ButterKnife;
  */
 
 public class EmergencyContactsFragment extends Fragment implements View.OnClickListener {
-    @BindView(emergencyContact)
-    EditText mEmergencyContactName;
+    @BindView(R.id.emergencyContact) EditText mEmergencyContactName;
     @BindView(R.id.emergencyNumber) EditText mEmergencyNumber;
     @BindView(R.id.emergencyContact1) EditText mEmergencyContactName1;
     @BindView(R.id.emergencyNumber1) EditText mEmergencyNumber1;
     @BindView(R.id.emergencyContact2) EditText mEmergencyContactName2;
     @BindView(R.id.emergencyNumber2) EditText mEmergencyNumber2;
-    @BindView(R.id.emergencyContactBtn)
-    Button mEmergencyContactBtn;
+    @BindView(R.id.emergencyContactBtn) Button mEmergencyContactBtn;
 
 
     @Override
@@ -89,10 +87,7 @@ public class EmergencyContactsFragment extends Fragment implements View.OnClickL
         String emergencyContactNumber2 = mEmergencyNumber2.getText().toString();
 
         FirebaseUser users= FirebaseAuth.getInstance().getCurrentUser();
-        String uid= null;
-        if (users != null) {
-            uid = users.getUid();
-        }
+        String uid=users.getUid();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
 

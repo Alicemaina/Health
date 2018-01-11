@@ -1,6 +1,5 @@
 package com.example.alice.health.notifications;
 
-import android.annotation.SuppressLint;
 import android.app.IntentService;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,12 +8,12 @@ import android.util.Log;
 
 import com.example.alice.health.MainActivity;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.microsoft.windowsazure.messaging.NotificationHub;
 
 /**
  * Created by alice on 1/2/18.
  */
 
-@SuppressLint("Registered")
 public class RegistrationIntentService extends IntentService {
 
     private static final String TAG = "RegIntentService";
@@ -95,4 +94,3 @@ public class RegistrationIntentService extends IntentService {
         }
     }
 }
-

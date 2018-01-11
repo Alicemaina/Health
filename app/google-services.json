@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "378013798926-rigjdebom48jdo9cl9t4gq7nkdrda0ei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.alice.health",
+            "certificate_hash": "0e2c8d84a85c54083eff5bd97338d7114586c10f"
+          }
+        },
+        {
           "client_id": "378013798926-1t1f5fm738em7n9ej035bdroi7vvdm8j.apps.googleusercontent.com",
           "client_type": 3
         }
